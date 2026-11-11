@@ -12,6 +12,7 @@ class KuhnPoker:
 
     def showdown(self):
         return 0 if self.card_values[self.dealt_cards[0]] > self.card_values[self.dealt_cards[1]] else 1 
+
     def get_infoset(self, plr_idx):
         """ The infoset are: "x", "xc", "xb", "xcb". Where "x" is one of the three possible cards. In total Kuhn poker has 12 infoset """
         infoset = self.dealt_cards[plr_idx] + self.history[2:]
